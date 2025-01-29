@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XKAI - Mëso më shumë rreth AI</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            background: url('flamuri.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Shton një shtresë të zezë transparente */
+            z-index: 1;
+        }
+
+        header h1, header p {
+            position: relative;
+            z-index: 2; /* Siguron që teksti të jetë mbi overlay */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shton hijë për ta bërë më të lexueshëm */
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Seksioni i Mesit */
+        .middle-section {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .middle-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Call-to-Action Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            color: white;
+            background: linear-gradient(135deg, #0078d7, #005bb5);
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .container p, .middle-section p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+
+            .cta-button img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XK-AI</h1>
+        <p>Mëso më shumë rreth Inteligjencës Artificiale (AI)</p>
+    </header>
+    <div class="container">
+        <p>Bashkohu me ne në Discord për të diskutuar dhe mësuar më shumë rreth AI, teknologjisë dhe inovacionit në Kosovë.</p>
+        <a href="https://discord.gg/ySZXfyBw" class="cta-button">
+            <img src="discord-logo.png" alt="Discord Logo">
+            Bashkohu Tani
+        </a>
+    </div>
+    <div class="middle-section">
+        <p>Inteligjenca Artificiale (AI) po bëhet një forcë transformuese në botën moderne, duke ndikuar në çdo aspekt të jetës sonë, nga shëndetësia dhe edukimi deri te ekonomia dhe komunikimi. Si shoqëri, është e rëndësishme të mobilizohemi për të kuptuar dhe përdorur këto teknologji në mënyrë të përgjegjshme dhe efektive. Përmes edukimit dhe bashkëpunimit, ne mund të përfitojmë nga mundësitë e AI dhe të ndërtojmë një të ardhme më të mirë për të gjithë.</p>
+    </div>
+    <footer>
+        <p>&copy; 2025 XKAI.</p>
+    </footer>
+</body>
+</html>
