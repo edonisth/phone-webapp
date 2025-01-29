@@ -55,35 +55,45 @@
             animation: fadeIn 2.5s ease-in-out;
         }
 
-        /* Main Content */
+        /* Main Content - Container */
         .container {
             padding: 40px 20px;
             text-align: center;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 40px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1.5s ease-in-out;
         }
 
         .container p {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            animation: fadeIn 3s ease-in-out;
+            color: #555;
         }
 
-        /* Seksioni i Mesit */
+        /* Seksioni i Mesit - Middle Section */
         .middle-section {
             padding: 40px 20px;
             text-align: center;
             max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            background: linear-gradient(135deg, #0078d7, #005bb5);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: slideUp 2s ease-in-out;
         }
 
         .middle-section p {
             font-size: 1.2rem;
             line-height: 1.8;
-            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .middle-section p:last-child {
+            margin-bottom: 0;
         }
 
         /* Call-to-Action Button */
@@ -103,8 +113,8 @@
         }
 
         .cta-button img {
-            width: 24px;
-            height: 24px;
+            width: 32px; /* Rritja e madhësisë së logos */
+            height: 32px; /* Rritja e madhësisë së logos */
             margin-right: 10px;
         }
 
@@ -140,6 +150,17 @@
             }
         }
 
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 600px) {
             header h1 {
@@ -160,8 +181,8 @@
             }
 
             .cta-button img {
-                width: 20px;
-                height: 20px;
+                width: 28px; /* Madhësi e përshtatur për ekran të vogël */
+                height: 28px; /* Madhësi e përshtatur për ekran të vogël */
             }
         }
     </style>
@@ -179,10 +200,12 @@
         </a>
     </div>
     <div class="middle-section">
-        <p>Inteligjenca Artificiale (AI) po bëhet një forcë transformuese në botën moderne, duke ndikuar në çdo aspekt të jetës sonë, nga shëndetësia dhe edukimi deri te ekonomia dhe komunikimi. Si shoqëri, është e rëndësishme të mobilizohemi për të kuptuar dhe përdorur këto teknologji në mënyrë të përgjegjshme dhe efektive. Përmes edukimit dhe bashkëpunimit, ne mund të përfitojmë nga mundësitë e AI dhe të ndërtojmë një të ardhme më të mirë për të gjithë.</p>
+        <p>Inteligjenca Artificiale (AI) po bëhet një forcë transformuese në botën moderne, duke ndikuar në çdo aspekt të jetës sonë, nga shëndetësia dhe edukimi deri te ekonomia dhe komunikimi. Si shoqëri, është e rëndësishme të mobilizohemi për të kuptuar dhe përdorur këto teknologji në mënyrë të përgjegjshme dhe efektive.</p>
+        <p>Përmes edukimit dhe bashkëpunimit, ne mund të përfitojmë nga mundësitë e AI dhe të ndërtojmë një të ardhme më të mirë për të gjithë. Grupi ynë ka për qëllim të ndihmojë në edukimin e njerëzve rreth këtyre teknologjive, duke ofruar një platformë ku të gjithë ata që duan të mësojnë më shumë ose të ndajnë njohuritë e tyre janë të mirëseardhur.</p>
+        <p>Pavarësisht nëse je fillestar apo ekspert, këtu mund të diskutojmë, të mësojmë dhe të rritemi së bashku në një mjedis miqësor dhe mbështetës.</p>
     </div>
     <footer>
-        <p>&copy; 2025 XKAI.</p>
+        <p>&copy; 2025 XK-AI.</p>
     </footer>
 </body>
 </html>
