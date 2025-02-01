@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XKAI - Mëso më shumë rreth AI</title>
     <style>
-        /* General Styles */
+        /* Stilet e Përgjithshme */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
-            color: #333;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
             line-height: 1.6;
         }
 
@@ -33,14 +33,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Shton një shtresë të zezë transparente */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
 
         header h1, header p {
             position: relative;
-            z-index: 2; /* Siguron që teksti të jetë mbi overlay */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shton hijë për ta bërë më të lexueshëm */
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         header h1 {
@@ -55,25 +55,43 @@
             animation: fadeIn 2.5s ease-in-out;
         }
 
-        /* Main Content - Container */
-        .container {
+/* Butoni Call-to-Action */
+ /* Butoni Call-to-Action */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #FFFFFF; /* Shkrim i bardhë i pastër */
+            background: linear-gradient(135deg, #0099ff, #0073e6); /* Gradient i ndritshëm blu */
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid #4db8ff; /* Kufizim i hollë që e bën më të dallueshëm */
+            box-shadow: 0 4px 8px rgba(0, 153, 255, 0.3);
+        }
+
+        /* Seksioni Kryesor */
+        main {
             padding: 40px 20px;
             text-align: center;
             max-width: 800px;
             margin: 40px auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             animation: slideUp 1.5s ease-in-out;
         }
 
-        .container p {
+        main p {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: #555;
+            color: #ddd;
         }
 
-        /* Seksioni i Mesit - Middle Section */
+        /* Seksioni i Mesëm */
         .middle-section {
             padding: 40px 20px;
             text-align: center;
@@ -84,63 +102,124 @@
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             animation: slideUp 2s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .middle-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
         }
 
         .middle-section p {
             font-size: 1.2rem;
             line-height: 1.8;
             margin-bottom: 20px;
+            transition: color 0.3s ease;
         }
 
         .middle-section p:last-child {
             margin-bottom: 0;
         }
 
-        /* Call-to-Action Button */
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            color: white;
-            background: linear-gradient(135deg, #0078d7, #005bb5);
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .middle-section:hover p {
+            color: #ffdd57;
         }
 
-        .cta-button img {
-            width: 32px; /* Rritja e madhësisë së logos */
-            height: 32px; /* Rritja e madhësisë së logos */
-            margin-right: 10px;
+        /* Seksioni i Përfitimeve */
+        .benefits-section {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            animation: slideUp 2s ease-in-out;
         }
 
-        .cta-button:hover {
+        .benefits-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 019, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .benefit img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .benefit p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* Seksioni FAQ */
+        .faq-section {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            animation: slideUp 2s ease-in-out;
+        }
+
+        .faq-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .faq h3 {
+            font-size: 1.2rem;
+            color: #ffdd57;
+        }
+
+        .faq p {
+            font-size: 1rem;
+            color: #ddd;
         }
 
         /* Footer */
+        /* Footer */
         footer {
-            background: #333;
+            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient që përshtatet me sfondin kryesor */
             color: white;
             text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
+            padding: 20px;
+            position: relative;
             width: 100%;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
         }
+
 
         footer p {
             margin: 0;
             font-size: 0.9rem;
         }
 
-        /* Animations */
+        /* Animacione */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -161,7 +240,7 @@
             }
         }
 
-        /* Responsive Design */
+        /* Responsiviteti */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2.5rem;
@@ -181,31 +260,62 @@
             }
 
             .cta-button img {
-                width: 28px; /* Madhësi e përshtatur për ekran të vogël */
-                height: 28px; /* Madhësi e përshtatur për ekran të vogël */
+                width: 28px;
+                height: 28px;
+            }
+
+            .benefit {
+                width: 100%;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>XK-AI</h1>
-        <p>Mëso më shumë rreth Inteligjencës Artificiale (AI)</p>
-    </header>
-    <div class="container">
-        <p>Bashkohu me ne në Discord për të diskutuar dhe mësuar më shumë rreth AI, teknologjisë dhe inovacionit në Kosovë.</p>
+        <h1>.xk-AI</h1>
+        <p>Bashkohu me komunitetin për të eksploruar Inteligjencën Artificiale!</p>
         <a href="https://discord.gg/ySZXfyBw" class="cta-button">
             <img src="discord-logo.png" alt="Discord Logo">
             Bashkohu Tani
         </a>
-    </div>
+    </header>
+    <main>
+        <p>Bashkohu me ne për të diskutuar rreth AI, teknologjisë dhe inovacionit në Kosovë.</p>
+    </main>
     <div class="middle-section">
-        <p>Inteligjenca Artificiale (AI) po bëhet një forcë transformuese në botën moderne, duke ndikuar në çdo aspekt të jetës sonë, nga shëndetësia dhe edukimi deri te ekonomia dhe komunikimi. Si shoqëri, është e rëndësishme të mobilizohemi për të kuptuar dhe përdorur këto teknologji në mënyrë të përgjegjshme dhe efektive.</p>
+ <p>Inteligjenca Artificiale (AI) po bëhet një forcë transformuese në botën moderne, duke ndikuar në çdo aspekt të jetës sonë, nga shëndetësia dhe edukimi deri te ekonomia dhe komunikimi. Si shoqëri, është e rëndësishme të mobilizohemi për të kuptuar dhe përdorur këto teknologji në mënyrë të përgjegjshme dhe efektive.</p>
         <p>Përmes edukimit dhe bashkëpunimit, ne mund të përfitojmë nga mundësitë e AI dhe të ndërtojmë një të ardhme më të mirë për të gjithë. Grupi ynë ka për qëllim të ndihmojë në edukimin e njerëzve rreth këtyre teknologjive, duke ofruar një platformë ku të gjithë ata që duan të mësojnë më shumë ose të ndajnë njohuritë e tyre janë të mirëseardhur.</p>
         <p>Pavarësisht nëse je fillestar apo ekspert, këtu mund të diskutojmë, të mësojmë dhe të rritemi së bashku në një mjedis miqësor dhe mbështetës.</p>
     </div>
+    <div class="benefits-section">
+        <h2>Pse të bashkohesh me ne?</h2>
+        <div class="benefit">
+            <img src="learn.png" alt="Mëso">
+            <p>Ndaj dhe fito njohuri mbi AI.</p>
+        </div>
+        <div class="benefit">
+            <img src="teamwork.png" alt="Bashkëpunim">
+            <p>Bashkëpuno në projekte të reja.</p>
+        </div>
+        <div class="benefit">
+            <img src="sources.png" alt="Burime">
+            <p>Qasje në materiale ekskluzive.</p>
+        </div>
+    </div>
+    <div class="faq-section">
+        <h2>Pyetje të Shpeshta</h2>
+        <div class="faq">
+            <h3>A është falas?</h3>
+            <p>Po, komuniteti është plotësisht falas!</p>
+        </div>
+        <div class="faq">
+            <h3>Si mund të bashkohem?</h3>
+            <p>Thjesht kliko butonin "Bashkohu Tani" dhe ndiq udhëzimet.</p>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2025 XK-AI.</p>
+        <p>&copy; 2025 .xk-AI</p>
     </footer>
 </body>
 </html>
